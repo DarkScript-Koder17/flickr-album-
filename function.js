@@ -4,7 +4,7 @@ var page = 1;
 console.log("ready!!!");
 function getlist(photoset_id, page){
     var xml = new XMLHttpRequest();
-    xml.open("GET", "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=" + apikey + "&per_page=200&format=json&nojsoncallback=1&photoset_id=" + photoset_id + "&page=" + page, false);
+    xml.open("GET", "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=" + apikey + "&per_page=500&format=json&nojsoncallback=1&photoset_id=" + photoset_id + "&page=" + page, false);
     xml.send();
     return JSON.parse(xml.response);
 }
